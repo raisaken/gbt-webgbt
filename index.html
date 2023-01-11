@@ -14,7 +14,7 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
-  <body>
+  <body id="body">
     <!-- Start Header -->
     <div class="logo">
       <div class="logo_flex">
@@ -56,15 +56,17 @@
         </a>
       </div>
       <div class="nav_items">
-        <a href="#home " class="nav-item active">Home</a>
-        <a href="#about" class="nav-item">About</a>
-        <a href="#services" class="nav-item">Services</a>
-        <a href="#customers" class="nav-item">Our Customers</a>
-        <a href="#expertise" class="nav-item">Expertise</a>
-        <a href="#testimonials" class="nav-item">Testimonials</a>
-        <a href="#proposition" class="nav-item">Value Proposition</a>
-        <a href="#contact" class="nav-item">Contact</a>
-        <a href="#career" class="nav-item">Career</a>
+        <a href="#home " class="nav-item active home">Home</a>
+        <a href="#about" class="nav-item about">About</a>
+        <a href="#services" class="nav-item services">Services</a>
+        <a href="#customers" class="nav-item customers">Our Customers</a>
+        <a href="#expertise" class="nav-item expertise">Expertise</a>
+        <a href="#testimonials" class="nav-item testimonials">Testimonials</a>
+        <a href="#proposition" class="nav-item proposition"
+          >Value Proposition</a
+        >
+        <a href="#contact" class="nav-item contact">Contact</a>
+        <a href="#career" class="nav-item career">Career</a>
       </div>
 
       <div class="sidevav_social_icons">
@@ -243,10 +245,10 @@
             <img src="./img/expertise/e3.png" alt="" />
             <h4>Wordpress</h4>
           </div>
-          <div class="img_container">
+          <!-- <div class="img_container">
             <img src="./img/expertise/e4.png" alt="" />
             <h4>Microsoft Azure</h4>
-          </div>
+          </div> -->
           <div class="img_container">
             <img src="./img/expertise/e5.png" alt="" />
             <h4>Google Cloud Platform</h4>
@@ -255,7 +257,7 @@
         <div class="expertise_row_two">
           <div class="img_container">
             <img src="./img/expertise/e6.png" alt="" />
-            <h4>Mobile App Development (Native/Cross-Platform)</h4>
+            <h4>Mobile App Development</h4>
           </div>
           <div class="img_container">
             <img src="./img/expertise/e7.png" alt="" />
@@ -289,7 +291,7 @@
           </div>
           <div class="img_container">
             <img src="./img/expertise/e14.png" alt="" />
-            <h4>Java</h4>
+            <h4>Flask</h4>
           </div>
           <div class="img_container">
             <img src="./img/expertise/e15.png" alt="" />
@@ -446,7 +448,7 @@
                 type="text"
                 id="fname"
                 name="fname"
-                value="Siddhant Acharya"
+                placeholder="Siddhant Acharya"
                 class="form_input"
               /><br />
               <label for="lname" class="form_title">Last name:</label><br />
@@ -454,23 +456,18 @@
                 type="text"
                 id="email"
                 name="email"
-                value="Siddhant Acharya"
+                placeholder="Siddhant Acharya"
                 class="form_input"
               /><br />
               <label for="message" class="form_title">Message:</label><br />
-
               <textarea
                 id="message"
                 name="message"
                 rows="4"
                 cols="50"
                 class="form_input"
-              >
-Dear XX/YY,
-I had a querry on how you operate regarding ZZZ
-problem. And I would also like an estimated quote if possible.
-</textarea
-              >
+                placeholder="Dear XX/YY,I had a querry on how you operate regarding ZZZ problem. And I would also like an estimated quote if possible."
+              ></textarea>
               <br />
               <br />
               <button type="submit" value="Submit" class="submit_button">

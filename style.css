@@ -316,7 +316,16 @@ img {
   font-size: 12px;
   line-height: 117.69%;
 }
-
+@media only screen and (max-width: 1440px) {
+  #about {
+    padding-right: 4%;
+  }
+}
+/* @media only screen and (max-width: 600px) {
+  #about {
+    margin-right: "0%";
+  }
+} */
 /* About Section  */
 
 /* Services Section  */
@@ -386,9 +395,34 @@ img {
 #services .card:focus-within ~ .card {
   transform: translatex(var(--distance));
 }
+@media only screen and (max-width: 1440px) {
+  #services {
+    /* width: 100%; */
+    /* padding-right: 5%; */
+    /* overflow-x: scroll; */
+    /* overflow: hidden; */
+  }
+  .services_container {
+    /* width: 100%; */
+    overflow-x: scroll;
+    /* padding-left: -200px; */
+  }
+  .card_container {
+    /* overflow-x: scroll; */
+    /* min-width: 300px; */
+  }
+  #services .cards {
+    /* width: auto; */
+    /* overflow-x: scroll; */
+    /* position: fixed;
+    position: relative;
+    overflow: hidden; */
+    /* overflow-x: scroll; */
+  }
+}
 @media only screen and (max-width: 1024px) {
   #services {
-    margin: 0;
+    /* margin: 0; */
     /* overflow-x: scroll; */
     /* overflow: hidden; */
   }
@@ -526,6 +560,18 @@ img {
   width: auto;
   margin: 20px 0;
 }
+@media only screen and (max-width: 1440px) {
+  .expertise_container {
+    /* margin: 0 30% 0 10% !important; */
+  }
+  .expertise_row_one {
+    max-width: 800px;
+  }
+  .expertise_row_two {
+    max-width: 1070px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .expertise_row_one {
     grid-template-columns: repeat(2, 1fr);
@@ -676,6 +722,18 @@ img {
     flex-direction: column;
     gap: 5rem 30rem;
   }
+  .proposition_container {
+    margin-right: 0% !important;
+  }
+  .proposition_container {
+    margin-top: 0%;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .proposition_container {
+    margin-right: 23.5%;
+    margin-top: 5%;
+  }
 }
 
 /* Proposition Section  */
@@ -691,12 +749,14 @@ img {
 .contact_item {
   flex: 1;
   flex-shrink: 0;
+  margin-right: 20px;
 }
 .contact_detail {
   margin: 20px 0;
 }
 .contact_details {
   display: flex;
+  flex-direction: column;
 }
 .contact_detail_item {
   flex: 1;

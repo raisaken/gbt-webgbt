@@ -6,34 +6,24 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   mobile_menu.classList.toggle("active");
 });
+
 menu_item.forEach((item) => {
   item.addEventListener("click", (x) => {
-    console.log(item, "item");
+    // arr_io.forEach((item) => {
+    //   observer.unobserve(item);
+    // });
     hamburger.classList.toggle("active");
     mobile_menu.classList.toggle("active");
-    // item.classList.toggle("active");
   });
 });
 
 $(".nav-item").on("click", function () {
-  console.log("clicked");
   //Remove any previous active classes
   $(".nav-item").removeClass("active");
 
   //Add active class to the clicked item
   $(this).addClass("active");
 });
-
-// function makeActive() {
-//   menu_item.forEach((item) => {
-//     item.addEventListener("click", () => {
-//       menu_item.classList.add("active");
-//     });
-//   });
-//   var element = document.getElementById("text");
-//   element.classList.add("active");
-//   element.innerHTML = "This is Active";
-// }
 
 // slider
 let slideIndex = 1;
@@ -87,3 +77,54 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
 }
+
+//intersection observer
+let observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio >= 0.6) {
+        menu_item.forEach((item) => {
+          const classes = item.classList;
+          if (Object.values(classes).includes(entry.target.id)) {
+            item.classList.add("active");
+          } else {
+            item.classList.remove("active");
+          }
+        });
+      }
+    });
+  },
+  { threshold: 0.9 }
+);
+
+let arr_io = [];
+
+let home = document.querySelector("#home");
+let about = document.querySelector("#about");
+let service = document.querySelector("#services");
+let customers = document.querySelector("#customers");
+let expertise = document.querySelector("#expertise");
+let testimonials = document.querySelector("#testimonials");
+let proposition = document.querySelector("#proposition");
+let contact = document.querySelector("#contact");
+let career = document.querySelector("#career");
+
+arr_io.push(
+  home,
+  about,
+  service,
+  customers,
+  expertise,
+  testimonials,
+  proposition,
+  contact,
+  career
+);
+// addEventListener("scroll", (event) => {
+//   arr_io.forEach((item) => {
+//     observer.observe(item);
+//   });
+// });
+arr_io.forEach((item) => {
+  observer.observe(item);
+});
