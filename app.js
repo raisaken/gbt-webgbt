@@ -9,9 +9,6 @@ hamburger.addEventListener("click", () => {
 
 menu_item.forEach((item) => {
   item.addEventListener("click", (x) => {
-    // arr_io.forEach((item) => {
-    //   observer.unobserve(item);
-    // });
     hamburger.classList.toggle("active");
     mobile_menu.classList.toggle("active");
   });
@@ -79,6 +76,19 @@ function showSlides(n) {
 }
 
 //intersection observer
+function debounce(func, timeout = 300) {
+  let timer;
+  return function (...args) {
+    if (timer) {
+      clearTimeout(timer);
+    }
+
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, timeout);
+  };
+}
+
 let observer = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
@@ -96,7 +106,6 @@ let observer = new IntersectionObserver(
   },
   { threshold: 0.9 }
 );
-
 let arr_io = [];
 
 let home = document.querySelector("#home");
@@ -120,11 +129,7 @@ arr_io.push(
   contact,
   career
 );
-// addEventListener("scroll", (event) => {
-//   arr_io.forEach((item) => {
-//     observer.observe(item);
-//   });
-// });
+
 arr_io.forEach((item) => {
   observer.observe(item);
 });

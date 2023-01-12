@@ -13,7 +13,7 @@
 html {
   font-size: 10px;
   font-family: "Inter", sans-serif;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 .container {
   min-height: 100vh;
@@ -81,11 +81,14 @@ img {
   position: fixed;
   width: 100%;
   z-index: 2;
-  margin: 20px 0 0 20px;
+  padding: 20px 0 0 20px;
+  background-color: #cfd2d5;
 }
 .logo_flex {
   display: flex;
   justify-content: space-between;
+  background-color: #cfd2d5;
+  box-shadow: 1px 4px 9px 7px rgb(207 210 213);
 }
 .logo img {
   height: auto;
