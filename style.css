@@ -247,7 +247,7 @@ img {
 
 /* Home Section  */
 #home {
-  background-image: url(./img/home_bg.png);
+  background-image: url(./img/bg__v1.jpg);
   background-size: cover;
   background-position: top center;
   position: relative;
@@ -283,7 +283,7 @@ img {
 
 /* About Section  */
 #about {
-  background-image: url(./img/home_bg.png);
+  background-image: url(./img/bg__v1.jpg);
   background-size: cover;
 }
 
@@ -333,7 +333,7 @@ img {
 
 /* Services Section  */
 #services {
-  background-image: url(./img/home_bg.png);
+  background-image: url(./img/bg__v1.jpg);
   background-size: cover;
 }
 
@@ -468,7 +468,7 @@ img {
 
 /* Customers Section  */
 #customers {
-  background-image: url(./img/home_bg.png);
+  background-image: url(./img/bg__v1.jpg);
   background-size: cover;
   flex-direction: column;
 }
@@ -516,7 +516,7 @@ img {
 
 /* Expertise Section  */
 #expertise {
-  background-image: url(./img/home_bg.png);
+  background-image: url(./img/bg__v1.jpg);
   background-size: cover;
   flex-direction: column;
 }
@@ -605,7 +605,7 @@ img {
 
 /* testimonials Section  */
 #testimonials {
-  background-image: url(./img/home_bg.png);
+  background-image: url(./img/bg__v1.jpg);
   background-size: cover;
   flex-direction: column;
 }
@@ -704,7 +704,7 @@ img {
 
 /* Proposition Section  */
 #proposition {
-  background-image: url(./img/home_bg.png);
+  background-image: url(./img/bg__v1.jpg);
   background-size: cover;
 }
 .proposition_container {
@@ -743,7 +743,7 @@ img {
 
 /* contact Section  */
 #contact {
-  background-image: url(./img/home_bg.png);
+  background-image: url(./img/bg__v1.jpg);
   background-size: cover;
 }
 .contact_container {
@@ -847,7 +847,7 @@ textarea {
 
 /* career Section  */
 #career {
-  background-image: url(./img/home_bg.png);
+  background-image: url(./img/bg__v1.jpg);
   background-size: cover;
   flex-direction: column;
   padding-bottom: 100px;
@@ -941,7 +941,7 @@ textarea {
 
 /* career_detail page*/
 .career_detail {
-  background-image: url(./img/home_bg.png);
+  background-image: url(./img/bg__v1.jpg);
   flex-direction: column;
 }
 .career_detail_container {
